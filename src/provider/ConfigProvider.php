@@ -5,7 +5,7 @@ namespace linkphp\event\provider;
 use linkphp\event\EventDefinition;
 use linkphp\event\EventServerProvider;
 use linkphp\boot\Exception;
-use linkphp\boot\Config;
+use linkphp\config\Config;
 
 class ConfigProvider implements  EventServerProvider
 {
