@@ -4,7 +4,7 @@ namespace linkphp\event\provider;
 
 use linkphp\event\EventDefinition;
 use linkphp\event\EventServerProvider;
-use linkphp\boot\Error;
+use linkphp\error\Error;
 
 class ErrorProvider implements  EventServerProvider
 {
