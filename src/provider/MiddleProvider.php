@@ -11,7 +11,7 @@ class MiddleProvider implements  EventServerProvider
 {
     public function update(EventDefinition $definition)
     {
-        Application::get('linkphp\boot\Middleware')
+        Application::get('linkphp\middleware\Middleware')
             ->import(include LOAD_PATH . 'middleware.php')
             ->beginMiddleware();
         return $definition;
