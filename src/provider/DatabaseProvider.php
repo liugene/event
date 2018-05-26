@@ -4,7 +4,7 @@ namespace linkphp\event\provider;
 
 use linkphp\event\EventDefinition;
 use linkphp\event\EventServerProvider;
-use linkphp\db\Db;
+use Db;
 use linkphp\boot\Exception;
 
 class DatabaseProvider implements  EventServerProvider

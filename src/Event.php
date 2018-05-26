@@ -53,7 +53,7 @@ class Event  implements EventSubject
     public function provider(EventDefinition $eventDefinition)
     {
         if($this->has($eventDefinition->getServer())){
-            throw new Exception('已经存在相同的事件名称');
+            throw new \Exception('已经存在相同的事件名称');
         } else {
             $this->event_map[$eventDefinition->getServer()] = $eventDefinition;
         }
