@@ -72,9 +72,13 @@ class Event  implements EventSubject
             call_user_func([$object,'update'],$observers);
             $observers->next();
         }
+        $this->remove($server);
     }
 
-    public function remove($server){}
+    public function remove($server)
+    {
+        unset($this->event_map[$server]);
+    }
 
     public function has($server)
     {

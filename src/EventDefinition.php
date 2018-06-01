@@ -14,9 +14,10 @@ class EventDefinition
      */
     private $observers = NULL;
 
-    public function __construct()
+    public function observers()
     {
         if(is_null($this->observers)) $this->observers = new SplObjectStorage();
+        return $this->observers;
     }
 
     public function setServer($server)
@@ -27,12 +28,12 @@ class EventDefinition
 
     public function getObservers()
     {
-        return $this->observers;
+        return $this->observers();
     }
 
     public function getCount()
     {
-        return $this->observers->count();
+        return $this->observers()->count();
     }
 
     public function getServer()
@@ -42,38 +43,38 @@ class EventDefinition
 
     public function current()
     {
-        return $this->observers->current();
+        return $this->observers()->current();
     }
 
     public function valid()
     {
-        return $this->observers->valid();
+        return $this->observers()->valid();
     }
 
     public function rewind()
     {
-        $this->observers->rewind();
+        $this->observers()->rewind();
     }
 
     public function key()
     {
-        return $this->observers->key();
+        return $this->observers()->key();
     }
 
     public function next()
     {
-        $this->observers->next();
+        $this->observers()->next();
     }
 
     public function getCurrent()
     {
-        return $this->observers->current();
+        return $this->observers()->current();
     }
 
     public function register(EventServerProvider $eventServerProvider)
     {
         // TODO: Implement register() method.
-        $this->observers->attach($eventServerProvider);
+        $this->observers()->attach($eventServerProvider);
         return $this;
     }
 
