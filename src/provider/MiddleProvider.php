@@ -4,8 +4,8 @@ namespace linkphp\event\provider;
 
 use linkphp\event\EventDefinition;
 use linkphp\event\EventServerProvider;
-use linkphp\Exception;
-use linkphp\Application;
+use framework\Exception;
+use framework\Application;
 
 class MiddleProvider implements  EventServerProvider
 {
