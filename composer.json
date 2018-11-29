@@ -14,7 +14,7 @@
   },
   "autoload": {
     "psr-4": {
-      "linkphp\\event\\": "src"
+      "link\\event\\": "src"
     }
   }
 }
